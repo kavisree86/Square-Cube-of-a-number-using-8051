@@ -1,4 +1,4 @@
-<img width="1259" height="1000" alt="image" src="https://github.com/user-attachments/assets/666ee178-0431-4798-a1c5-a919efedc200" /># Square-Cube-of-a-number-using-8051
+
 # 8051 Square  Program
 
 ## AIM
@@ -15,16 +15,16 @@ To write and execute an Assembly language program for finding the square of a gi
 4. The output square value is stored in Port 2 (P2).
 
 ## PROGRAM
+
 ```
-
-
-
-
-
-
-
-
-
+ORG 00H
+MOV R0,#50H
+MOV A,@R0
+MOV B,@R0
+MUL AB
+INC R0
+MOV @R0,A
+END
 ```
 
 ## OUTPUT
@@ -56,15 +56,17 @@ To write and execute an Assembly language program for finding the cube of a give
 4. The output cube value is stored in a memory location.
 
 ## PROGRAM
+
 ```
-
-
-
-
-
-
-
-
+MOV A,P0
+MOV B,A
+MUL AB
+MOV R0,A
+MOV A,R0
+MOV B,P0
+MUL AB
+MOV P2,A
+END
 ```
 
 
